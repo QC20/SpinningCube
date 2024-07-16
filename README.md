@@ -2,7 +2,9 @@
 
 <div align="center">
   <img src="assets/gif/spinningCube.gif" alt="Spinning Cube Animation">
+  <p>The Arduino is placed underneath the OLED display here. If you look closely, you can see it sticks out on the left end, and the FTDI connects from the right.</p>
 </div>
+
 
 ## 🚀 [Try the Digital Simulation](https://wokwi.com/projects/394541744677321729)
 <!-- Note: The simulation uses an Arduino UNO as Wokwi doesn't support the Pro Mini, but the actual project runs on a Pro Mini -->
