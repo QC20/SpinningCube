@@ -52,10 +52,10 @@ When working with this project, it's crucial to maintain the correct file struct
 - Ensure all necessary `.h` (header) files are in the same directory as the main `.ino` file.
 - The Arduino IDE requires the main `.ino` file to be in a folder with the same name.
 - Example file structure:
-    SpinningCube/
-    ├── SpinningCube.ino
-    ├── U8glib.h
-    └── [Any other required .h files]
+     - SpinningCube/
+       - ├── SpinningCube.ino
+       - ├── U8glib.h
+       - └── [Any other required .h files]
 - When uploading to the Arduino Pro Mini, select the correct board and port in the Arduino IDE.
 
 Maintaining this structure ensures that the Arduino IDE can find all necessary files during compilation, preventing missing header errors and ensuring a smooth upload process.
