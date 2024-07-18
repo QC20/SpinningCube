@@ -1,33 +1,11 @@
-// simple project with rotating 3D cube using Arduino UNO and Transparent 128x64 OLED Display, 
-// created by upir, 2022
-// youtube channel: https://www.youtube.com/upir_upir
-// full tutoral is here: https://youtu.be/kBAcaA7NAlA
-
-// Turbo pressure gauge tutorial: https://youtu.be/JXmw1xOlBdk
-// Transparent OLED tutorial: https://youtu.be/hIFDcksXgBk
-// Knob + OLED tutorial: https://youtu.be/NPfaLKKsf_Q
-
-// useful links:
-// u8g documentation: https://github.com/olikraus/u8glib/wiki/userreference
-// Wokwi starting project: https://wokwi.com/arduino/projects/300867986768527882
-// Arduino UNO: http://store.arduino.cc/products/arduino-uno-rev3
-// Arduino UNO MINI: https://store.arduino.cc/products/uno-mini-le
-// Multidimensional arrays: https://www.tutorialspoint.com/arduino/arduino_multi_dimensional_arrays.htm
-// 2D Rotation: https://en.wikipedia.org/wiki/Rotation_(mathematics)
-// Normal OLED Display: https://www.aliexpress.com/item/4001051535838.html
-// Transparent OLED Display: https://a.aliexpress.com/_mKGmhKg
-// Big OLED Display: https://www.aliexpress.com/item/1005003091769556.html
-// Arduino breadboard prototyping shield: https://www.adafruit.com/product/2077
-
-
-
 #include "U8glib.h" // u8g library, note there is a newer version u8g2, please use the older one
 
-const uint8_t upir_logo[] U8G_PROGMEM = {        // another simple way how to define pictures for u8g library
-B00010101, B11010111,     //  ░░░█░█░███░█░███
-B00010101, B01000101,     //  ░░░█░█░█░█░░░█░█
-B00010101, B10010110,     //  ░░░█░█░██░░█░██░
-B00011001, B00010101      //  ░░░██░░█░░░█░█░█
+const uint8_t yunus_logo[] U8G_PROGMEM = {        // Yunus is my alias. Go ahead and make your own if you like
+B00001010, B10101001, B01010111,     // ░░░░█░█░█░█░█░░█░█░█░███
+B00001010, B10101011, B01010100,    //  ░░░░█░█░█░█░█░██░█░█░█░░
+B00001010, B10101101, B01010010,    //  ░░░░█░█░█░█░██░█░█░█░░█░
+B00000100, B10101001, B01110001,    //  ░░░░░█░░█░█░█░░█░███░░░█
+B00000100, B11101001, B01110111    //   ░░░░░█░░███░█░░█░███░███
 };
 
 // uncomment the correct connection - fast I2C, slow I2C, SPI
@@ -104,8 +82,8 @@ void loop() {
       u8g.drawLine(points[ 2 ][ 0 ], points[ 2 ][ 1 ] , points[ 6 ][ 0 ] , points[ 6 ][ 1 ] );  // connect points 2-6      
       u8g.drawLine(points[ 3 ][ 0 ], points[ 3 ][ 1 ] , points[ 7 ][ 0 ] , points[ 7 ][ 1 ] );  // connect points 3-7                 
 
-    // draw upir logo 
-    //u8g.drawBitmapP(112, 0, 2, 4, upir_logo); 
+    // draw yunus logo 
+    u8g.drawBitmapP(100, 0, 3, 5, yunus_logo); 
 
   } while ( u8g.nextPage() );   // u8g library specific, has to be there
 
