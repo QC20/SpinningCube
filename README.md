@@ -60,7 +60,6 @@ When working with this project, it's crucial to maintain the correct file struct
 
 Maintaining this structure ensures that the Arduino IDE can find all necessary files during compilation, preventing missing header errors and ensuring a smooth upload process.
 
-
 ## Creative Coding and Interaction Possibilities
 
 - Add potentiometers to control rotation speed or cube size
